@@ -1,0 +1,147 @@
+2017-07-24 17:09:53 I [Test Case] test_1415 start 
+2017-07-24 17:09:53 I [driver_init] start
+2017-07-24 17:10:07 I [driver_init] end
+2017-07-24 17:10:07 I [Sign up] start
+2017-07-24 17:10:41 I [Sign up] end
+2017-07-24 17:10:41 I [Verify] start
+2017-07-24 17:11:24 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:11:27 I Please check the screen shoot
+2017-07-24 17:11:27 I [Verify] end
+2017-07-24 17:11:27 I [logout] start
+2017-07-24 17:11:43 I [logout] end
+2017-07-24 17:11:43 I [login] start
+2017-07-24 17:12:11 I [login] end
+2017-07-24 17:12:11 I [Test Case] test_1415 passed 
+2017-07-24 17:12:11 I [driver_close] start
+2017-07-24 17:12:12 I [driver_close] end
+2017-07-24 17:12:12 I [Test Case] test_1948 start 
+2017-07-24 17:12:12 I [driver_init] start
+2017-07-24 17:12:29 I [driver_init] end
+2017-07-24 17:12:29 I [Sign up resend email] start
+2017-07-24 17:12:29 I [Sign up] start
+2017-07-24 17:13:06 I [Sign up] end
+2017-07-24 17:13:11 I [Verify] start
+2017-07-24 17:13:51 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:13:53 I Please check the screen shoot
+2017-07-24 17:13:53 I [Verify] end
+2017-07-24 17:14:06 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:14:09 I Please check the screen shoot
+2017-07-24 17:14:09 I [Sign up resend email] end
+2017-07-24 17:14:22 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:14:22 W [Test Case] test_1948 failed 
+2017-07-24 17:14:22 I [driver_close] start
+2017-07-24 17:14:23 I [driver_close] end
+2017-07-24 17:14:23 I [Test Case] test_1949 start 
+2017-07-24 17:14:23 I [driver_init] start
+2017-07-24 17:14:40 I [driver_init] end
+2017-07-24 17:14:40 I [Sign up change email] start
+2017-07-24 17:14:40 I [Sign up] start
+2017-07-24 17:15:17 I [Sign up] end
+2017-07-24 17:15:32 I [Verify] start
+2017-07-24 17:16:13 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:16:16 I Please check the screen shoot
+2017-07-24 17:16:16 I [Verify] end
+2017-07-24 17:16:29 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:16:29 I Please check the screen shoot
+2017-07-24 17:16:29 I [Sign up change email] end
+2017-07-24 17:16:42 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:16:42 W [Test Case] test_1949 failed 
+2017-07-24 17:16:42 I [driver_close] start
+2017-07-24 17:16:43 I [driver_close] end
+2017-07-24 17:16:43 I [Test Case] test_1951 start 
+2017-07-24 17:16:43 I [driver_init] start
+2017-07-24 17:16:59 I [driver_init] end
+2017-07-24 17:16:59 I [Sign up] start
+2017-07-24 17:17:35 I [Sign up] end
+2017-07-24 17:17:35 I [Sign up and skip] start
+2017-07-24 17:17:41 I [Sign up and skip] end
+2017-07-24 17:17:41 I [logout] start
+2017-07-24 17:17:56 I [logout] end
+2017-07-24 17:17:56 I [login] start
+2017-07-24 17:18:24 I [login] end
+2017-07-24 17:18:24 I [Test Case] test_1951 passed 
+2017-07-24 17:18:24 I [driver_close] start
+2017-07-24 17:18:25 I [driver_close] end
+2017-07-24 17:18:25 I [Test Case] test_1951_2 start 
+2017-07-24 17:18:25 I [driver_init] start
+2017-07-24 17:18:40 I [driver_init] end
+2017-07-24 17:18:40 I [Sign up] start
+2017-07-24 17:19:18 I [Sign up] end
+2017-07-24 17:19:18 I [kill app] start
+2017-07-24 17:19:19 I [kill app] end
+2017-07-24 17:19:21 I [open app] start
+2017-07-24 17:19:21 I [open app] end
+2017-07-24 17:19:24 I [Test Case] test_1951_2 passed 
+2017-07-24 17:19:24 I [driver_close] start
+2017-07-24 17:19:25 I [driver_close] end
+2017-07-24 17:19:25 I [Test Case] test_2020 start 
+2017-07-24 17:19:25 I [driver_init] start
+2017-07-24 17:19:41 I [driver_init] end
+2017-07-24 17:19:41 I [Sign up] start
+2017-07-24 17:20:17 I [Sign up] end
+2017-07-24 17:20:17 I [Verify] start
+2017-07-24 17:20:58 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:21:01 I Please check the screen shoot
+2017-07-24 17:21:01 I [Verify] end
+2017-07-24 17:21:01 I [Edit Profile after sign up] start
+2017-07-24 17:21:03 W Message: An element could not be located on the page using the given search parameters.
+
+2017-07-24 17:21:03 I [Edit Profile after sign up] end
+2017-07-24 17:21:16 W [Error] The element: com.deepblu.android.deepblu.internal:id/edit_text_user_name can't be found. Message: 
+
+2017-07-24 17:21:16 W [Test Case] test_2020 failed 
+2017-07-24 17:21:16 I [driver_close] start
+2017-07-24 17:21:17 I [driver_close] end
+2017-07-24 17:21:17 I [Test Case] test_2085 start 
+2017-07-24 17:21:17 I [driver_init] start
+2017-07-24 17:21:33 I [driver_init] end
+2017-07-24 17:21:33 I [Sign up] start
+2017-07-24 17:22:09 I [Sign up] end
+2017-07-24 17:22:09 I [Sign up and skip] start
+2017-07-24 17:22:15 I [Sign up and skip] end
+2017-07-24 17:22:15 I [Sign up token expire] start
+2017-07-24 17:22:20 I [Sign up token expire] end
+2017-07-24 17:22:20 I [Test Case] test_2085 passed 
+2017-07-24 17:22:20 I [driver_close] start
+2017-07-24 17:22:21 I [driver_close] end
+2017-07-24 17:22:21 I [Test Case] test_253 start 
+2017-07-24 17:22:21 I [driver_init] start
+2017-07-24 17:22:36 I [driver_init] end
+2017-07-24 17:22:36 I [Sign up with existed email] start
+2017-07-24 17:23:02 I [Sign up with existed email] end
+2017-07-24 17:23:02 I [Test Case] test_253 passed 
+2017-07-24 17:23:02 I [driver_close] start
+2017-07-24 17:23:03 I [driver_close] end
+2017-07-24 17:23:03 I [Test Case] test_93_1 start 
+2017-07-24 17:23:03 I [driver_init] start
+2017-07-24 17:23:18 I [driver_init] end
+2017-07-24 17:23:18 I [Sign up] start
+2017-07-24 17:23:53 I [Sign up] end
+2017-07-24 17:23:53 I [Verify] start
+2017-07-24 17:24:35 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:24:37 I Please check the screen shoot
+2017-07-24 17:24:37 I [Verify] end
+2017-07-24 17:24:51 W [Error] The element: com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right can't be found. Message: 
+
+2017-07-24 17:24:51 W [Test Case] test_93_1 failed 
+2017-07-24 17:24:51 I [driver_close] start
+2017-07-24 17:24:52 I [driver_close] end
+2017-07-24 17:24:52 I [Test Case] test_93_2 start 
+2017-07-24 17:24:52 I [driver_init] start
+2017-07-24 17:25:08 I [driver_init] end
+2017-07-24 17:25:08 I [Sign up] start
+2017-07-24 17:25:45 I [Sign up] end
+2017-07-24 17:25:45 I [Verify] start
+2017-07-24 17:25:53 I [Verify] end
+2017-07-24 17:25:53 I [Test Case] test_93_2 passed 
+2017-07-24 17:25:53 I [driver_close] start
+2017-07-24 17:25:54 I [driver_close] end

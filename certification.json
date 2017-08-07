@@ -1,0 +1,95 @@
+{
+  "certification":{
+    "ADS":
+      [
+        "Open Water Diver",
+        "Adcanced Diver",
+        "Rescue Diver",
+        "Divemaster",
+        "Instructor /Above",
+        "Course Director"
+      ],
+    "AIDA":
+      [
+        "1 Star Freediver",
+        "2 Star Freediver",
+        "3 Star Freediver",
+        "4 Star Freediver",
+        "Instructor /Above",
+        "Course Director"
+      ],
+    "BASAC":
+      [
+        "Ocean diver",
+        "Sports diver",
+        "Dive Leader",
+        "Advanced Diver",
+        "Divemaster",
+        "Instructor /Above",
+        "Course Director"
+      ],
+    "CMAS":
+      [
+        "1 Star",
+        "2 Star",
+        "3 Stars (Divemaster)",
+        "Instructor /Above",
+        "Course Director"
+      ],
+    "IDA":
+      [
+        "Discover Scuba Diver",
+        "1 Star",
+        "Advanced Open Water Diver",
+        "2 Star",
+        "Master Diver",
+        "3 Star",
+        "4 Star",
+        "Dive Guide",
+        "Assistant Instructor",
+        "Instructor 1 Star",
+        "Instructor 2 Star",
+        "Course Director",
+        "Instructor Examiner"
+      ],
+    "NAUI":
+      [
+        "Scuba Diver",
+        "Advanced Scuba Diver",
+        "Rescue Scuba Diver",
+        "Master Scuba Diver",
+        "Divemaster"
+      ],
+    "PADI":
+      [
+        "Open Water",
+        "Advanced Open Water",
+        "Rescue Diver",
+        "Master Diver",
+        "Divemaster"
+      ],
+    "SDI/TDI":
+      [
+        "Open Water Scuba Diver",
+        "Advanced Adventure Diver",
+        "Rescue Diver",
+        "Master Diver",
+        "Divemaster"
+      ],
+    "SSI":
+      [
+        "Open Water",
+        "Specialities Diver",
+        "Advanced open water",
+        "Stress / Rescue Diver",
+        "DiveGuide"
+      ],
+    "Other":
+    [
+      "Open Water",
+      "Advanced Open Water",
+      "Divemaster",
+      "Instructor /Above"
+    ]
+  }
+}
