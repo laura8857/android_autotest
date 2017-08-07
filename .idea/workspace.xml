@@ -2,7 +2,121 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d62088-e888-44b0-a7b1-c41919cfd29a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/android_login.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/20170715_222655.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/20170715_225615.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/20170715_225903.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222838_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222844_SignUp_resendEmail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222913_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222928_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222929_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222941_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222943_SignUpfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222955_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223051_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223133_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223148_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223150_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223202_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223215_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223310_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223315_SignUpSkip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223328_Logout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224142_login.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224240_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224341_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224408_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224423_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224425_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224439_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224537_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224543_SignUpSkip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224616_tokenExpireFailed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224630_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224717_SignupExistedEmail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224814_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224839_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224855_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224856_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224909_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225006_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225008_Verify_link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225013_Veirfy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225759_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225804_SignUpSkip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225837_tokenExpireFailed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225851_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/100835_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/100836_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171040_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171106_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171122_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171124_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171139_Logout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171209_login.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171304_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171307_SignUp_resendEmail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171333_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171348_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171351_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171404_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171406_SignUpfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171420_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171515_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171555_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171610_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171613_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171626_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171639_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171734_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171738_SignUpSkip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171752_Logout.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171822_login.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171916_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172015_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172040_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172056_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172058_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172113_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172207_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172212_SignUpSkip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172218_SignUpTokenExpire.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172300_SignupExistedEmail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172352_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172417_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172432_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172435_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172448_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172543_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172546_Verify_link.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172551_Veirfy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173834_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173840_SignUp_resendEmail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173905_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173921_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173924_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173937_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173940_SignUpfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173952_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174045_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174129_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174144_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174149_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174203_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174218_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174313_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174337_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174352_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174356_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174413_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174506_SignUp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174531_Verify_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174546_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174550_Veirfyfail.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174605_Error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/20170724_100721.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/20170724_170953.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/20170724_173745.log" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -213,34 +327,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="android_appium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_appium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_appium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_appium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_appium" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidAppTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,9 +705,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19224556" sideWeight="0.4948605" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19224556" sideWeight="0.4948605" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26849315" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20117474" sideWeight="0.2092084" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />

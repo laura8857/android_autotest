@@ -1,6 +1,0 @@
-2017-07-15 22:59:03 I [Test Case] test_1415 start 
-2017-07-15 22:59:03 I [driver_init] start
-2017-07-15 22:59:22 I [driver_init] end
-2017-07-15 22:59:53 W [Test Case] test_1415 failed 
-2017-07-15 22:59:53 I [driver_close] start
-2017-07-15 22:59:54 I [driver_close] end
