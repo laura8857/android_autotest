@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-import deepblu_lib as deepblu
+from deepblu_lib import log
 import desired_capabilities
 import os
 import time
@@ -28,28 +28,28 @@ from deepblu_tool import screenshot
 def driver_init():
     global driver
     try:
-        deepblu.log('[driver_init] start')
+        log('[driver_init] start')
         desired_caps = desired_capabilities.get_desired_capabilities('appPackage',
                                                                      'com.deepblu.android.deepblu.internal',
                                                                      'android')
         driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-        deepblu.log('[driver_init] end')
+        log('[driver_init] end')
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 def driver_close():
     try:
-        deepblu.log('[driver_close] start')
+        log('[driver_close] start')
         driver.close_app()
         driver.close
-        deepblu.log('[driver_close] end')
+        log('[driver_close] end')
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 def login(email=None, password=None):
-    deepblu.log('[login] start')
+    log('[login] start')
     try:
         if email is None:
             email = desired_capabilities.account()
@@ -68,15 +68,15 @@ def login(email=None, password=None):
             common.sleep(3)
             driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/buttonSignUp").click()
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
     screenshot("login")
-    deepblu.log('[login] end')
+    log('[login] end')
 
 
 def login_skip():
-    deepblu.log('[login_skip] start')
+    log('[login_skip] start')
     try:
         el = common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/textLogin')
         if el:
@@ -89,20 +89,20 @@ def login_skip():
             if checkel:
                 screenshot('loginSkip')
             else:
-                deepblu.log("Please see screenshot.")
+                log("Please see screenshot.")
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
-    deepblu.log('[login_skip] end')
+    log('[login_skip] end')
 
 
 def logout():
-    deepblu.log('[logout] start')
+    log('[logout] start')
 
     try:
-        driver.find_element_by_xpath(GlobalString.tab + "[5]").click()
+        driver.find_element_by_xpath(GlobalString.menu).click()
         common.sleep(3)
         common.swipeup()
         # logout xpath :note5 12 zenfone 10
@@ -113,25 +113,25 @@ def logout():
         if el:
             driver.find_element_by_id("android:id/button1").click()
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
         common.sleep(3)
         # verify successful or not
         checkel = common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/textLogin')
         if checkel:
             screenshot("Logout")
         else:
-            deepblu.log('Please check the screenshot')
+            log('Please check the screenshot')
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log('[logout] end')
+        log(e, 'w')
+    log('[logout] end')
 
 
 # about page
 def about():
-    deepblu.log('[about] start')
+    log('[about] start')
     try:
         # menu page
-        driver.find_element_by_xpath(GlobalString.tab + "[5]").click()
+        driver.find_element_by_xpath(GlobalString.menu).click()
         common.sleep(5)
 
         # about page
@@ -140,22 +140,22 @@ def about():
 
         screenshot("About")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
     try:
         # app version
-        deepblu.log('[appVersion] start')
+        log('[appVersion] start')
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/about_version_secondary_text").click()
         common.sleep(3)
         screenshot("appVersion")
         common.back()
-        deepblu.log('[appVersion] end')
+        log('[appVersion] end')
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
     try:
         # Term&Conditoins
-        deepblu.log('[Term&Condtions] start')
+        log('[Term&Condtions] start')
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/about_term_primary_text").click()
         common.sleep(3)
         screenshot("Term&CondtionsStart")
@@ -167,35 +167,35 @@ def about():
         screenshot("Term&ConditionsEnd")
         common.sleep(2)
         common.back()
-        deepblu.log('[Term&Conditions] end')
+        log('[Term&Conditions] end')
 
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
     try:
         # Guidelines
-        deepblu.log('[Guidelines] start')
+        log('[Guidelines] start')
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/about_guideline_primary_text").click()
         common.sleep(3)
         screenshot("Guidelines")
         common.sleep(2)
         common.back()
-        deepblu.log('[Guidelines] end')
+        log('[Guidelines] end')
 
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
     # 返回menu page
     common.back()
-    deepblu.log('[about] end')
+    log('[about] end')
 
 
 # menu page的help
 def help():
-    deepblu.log("[Help] start")
+    log("[Help] start")
     try:
         # menu page
-        driver.find_element_by_xpath(GlobalString.tab + "[5]").click()
+        driver.find_element_by_xpath(GlobalString.menu).click()
         common.sleep(5)
         # help page
         driver.find_element_by_xpath(GlobalString.list + "[9]").click()
@@ -207,24 +207,24 @@ def help():
                "webkit.WebView[1]/android.view.View[2]"
         el = common.wait(type='xpath', el=path)
         if el:
-            deepblu.log("網頁正常出現")
+            log("網頁正常出現")
         else:
-            deepblu.log("\n 網頁沒有load出來")
+            log("\n 網頁沒有load出來")
         screenshot("Help")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
     # 返回menu page
     common.back()
-    deepblu.log("[Help] end")
+    log("[Help] end")
 
 
 # menu page的app feedback
 def appfeedback():
-    deepblu.log("[App feedback] start")
+    log("[App feedback] start")
     try:
         # menu page
-        driver.find_element_by_xpath(GlobalString.tab + "[5]").click()
+        driver.find_element_by_xpath(GlobalString.menu).click()
         common.sleep(5)
         # appfeedback page
         driver.find_element_by_xpath(GlobalString.list + "[10]").click()
@@ -252,22 +252,22 @@ def appfeedback():
                 screenshot("appfeedback")
                 driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/feedback_submitted_button").click()
             else:
-                deepblu.log("Report failed.Please check screenshot.")
+                log("Report failed.Please check screenshot.")
                 # 返回menu page
                 common.back()
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
 
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[App feedback] end")
+        log(e, 'w')
+    log("[App feedback] end")
 
 
 def events():
-    deepblu.log("[Events] start")
+    log("[Events] start")
     try:
         # menu page
-        driver.find_element_by_xpath(GlobalString.tab + "[5]").click()
+        driver.find_element_by_xpath(GlobalString.menu).click()
         common.sleep(5)
         # events page
         driver.find_element_by_xpath(GlobalString.list + "[8]").click()
@@ -279,24 +279,24 @@ def events():
                "WebView[1]/android.view.View[1]/android.widget.Image[1]"
         el = common.wait(type='xpath', el=path)
         if el:
-            deepblu.log("網頁正常出現")
+            log("網頁正常出現")
         else:
-            deepblu.log("\n 網頁沒有load出來")
+            log("\n 網頁沒有load出來")
         screenshot("Events")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
     # 返回menu page
     common.back()
-    deepblu.log("[Events] end")
+    log("[Events] end")
 
 
 def userProfile():
     try:
-        deepblu.log("[User Profile] start")
+        log("[User Profile] start")
 
         # 一般方法進入user profile page
         # # menu page
-        # driver.find_element_by_xpath(GlobalString.tab + "[5]").click()
+        # driver.find_element_by_xpath(GlobalString.menu).click()
         # common.sleep(5)
         # # user profile page
         # driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/item_menu_user_profile_icon").click()
@@ -309,16 +309,16 @@ def userProfile():
 
         # 返回menu page
         # common.back()
-        deepblu.log("[User Profile] end")
+        log("[User Profile] end")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 def editUserProfile():
-    deepblu.log("[Edit User Profile] start")
+    log("[Edit User Profile] start")
     # 一般方法進入Edit User Profile page
     # menu page
-    # driver.find_element_by_xpath(GlobalString.tab + "[5]").click()
+    # driver.find_element_by_xpath(GlobalString.menu).click()
     # common.sleep(5)
     # # user profile page
     # driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/item_menu_user_profile_icon").click()
@@ -333,7 +333,7 @@ def editUserProfile():
     screenshot("EditUserProfile")
 
     # 編輯user profile
-    deepblu.log("[Avatar&Background] start")
+    log("[Avatar&Background] start")
     driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/user_profile_edit_avatar").click()
     common.sleep(2)
 
@@ -349,7 +349,7 @@ def editUserProfile():
     #     # 第三個資料夾第二張照片
     #     changePhoto("3", "2")
     # except Exception as e:
-    #     deepblu.log(e)
+    #     log(e)
     # #background
     # try:
     #     driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/user_profile_edit_background").click()
@@ -357,11 +357,11 @@ def editUserProfile():
     #     # 第二個資料夾第二張照片
     #     changePhoto("2", "2")
     # except Exception as e:
-    #     deepblu.log(e)
+    #     log(e)
     #
-    # deepblu.log("[Avatar&Background] end")
+    # log("[Avatar&Background] end")
 
-    deepblu.log("[name] start")
+    log("[name] start")
     try:
         # name
         userel = driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/edit_text_user_name")
@@ -381,12 +381,12 @@ def editUserProfile():
         lastel.send_keys(Lastname)
         common.back()
     except Exception as e:
-        deepblu.log(e)
+        log(e)
 
-    deepblu.log("[name] end")
+    log("[name] end")
 
     # 性別   男->女 女->其他 其他->男
-    deepblu.log("[gender] start")
+    log("[gender] start")
     try:
         # gender1 = driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/spinnerItem").text
         gender = driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/spinnerItem").text
@@ -412,13 +412,13 @@ def editUserProfile():
                 "//android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout"
                 "[1]/android.widget.TextView[1]").click()
     except Exception as e:
-        deepblu.log(e)
-    deepblu.log("[gender] end")
+        log(e)
+    log("[gender] end")
     common.sleep(2)
 
     common.swipeup2()
     # country
-    deepblu.log("[country] start")
+    log("[country] start")
     try:
         elc = driver.find_element_by_id(
             "com.deepblu.android.deepblu.internal:id/user_profile_edit_region_auto_complete_text_view")
@@ -443,14 +443,14 @@ def editUserProfile():
         TouchAction(driver).press(x=x1, y=y1).release().perform()
         common.sleep(2)
     except Exception as e:
-        deepblu.log(e)
+        log(e)
 
-    deepblu.log("[country] end")
+    log("[country] end")
 
     common.sleep(2)
     common.swipeup2()
     # short bio
-    deepblu.log("[short bio] start")
+    log("[short bio] start")
     try:
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/edit_text_short_bio").clear()
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/edit_text_short_bio").send_keys(
@@ -459,11 +459,11 @@ def editUserProfile():
         common.back()
         screenshot("EditUserProfileAfter")
     except Exception as e:
-        deepblu.log(e)
-    deepblu.log("[Edit User Profile] end")
+        log(e)
+    log("[Edit User Profile] end")
 
     # non deepblu dive
-    deepblu.log("[Non-deepblu dive] start")
+    log("[Non-deepblu dive] start")
     common.swipeup2()
     common.swipeup2()
     try:
@@ -477,8 +477,8 @@ def editUserProfile():
         diveel.send_keys(divenumber)
         common.back()
     except Exception as e:
-        deepblu.log(e)
-    deepblu.log("[Non-deepblu dive] end")
+        log(e)
+    log("[Non-deepblu dive] end")
 
     # save
     try:
@@ -488,9 +488,9 @@ def editUserProfile():
         # sleep(2)
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/user_profile_edit_done_button").click()
     except Exception as e:
-        deepblu.log(e)
+        log(e)
 
-    deepblu.log("[Edit User Profile] end")
+    log("[Edit User Profile] end")
 
 
     #將照片換回來
@@ -516,11 +516,11 @@ def editUserProfile():
     #     # save
     #     driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/user_profile_edit_done_button").click()
     # except Exception as e:
-    #     deepblu.log(e)
+    #     log(e)
 
 
 def post_text():
-    deepblu.log("[Post Text] start")
+    log("[Post Text] start")
     try:
         postIcon = GlobalString.create_post
         el = common.wait(type='xpath', el=postIcon)
@@ -531,7 +531,7 @@ def post_text():
             if el2:
                 driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/text_post_group").click()
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
                 common.sleep(2)
             driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/post_caption").click()
             content = ""
@@ -546,22 +546,22 @@ def post_text():
             if el3:
                 driver.find_element_by_id("android:id/button1").click()
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
             common.sleep(2)
             checkel = common.wait(type='xpath', el=postIcon)
             if checkel:
                 screenshot("PostText")
             else:
-                deepblu.log('Please check the screen shoot')
+                log('Please check the screen shoot')
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Post Text] end")
+        log(e, 'w')
+    log("[Post Text] end")
 
 
 def post_link():
-    deepblu.log("[Post Link] start")
+    log("[Post Link] start")
     try:
         postIcon = GlobalString.create_post
         el = common.wait(type='xpath', el=postIcon)
@@ -572,7 +572,7 @@ def post_link():
             if el2:
                 driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/link_post_group").click()
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
             common.sleep(2)
             link = "https://www.deepblu.com"
             # link = random.choice(GlobalString.link)
@@ -596,25 +596,25 @@ def post_link():
                 if el3:
                     driver.find_element_by_id("android:id/button1").click()
                 else:
-                    deepblu.log("Please check the screen shoot")
+                    log("Please check the screen shoot")
                 common.sleep(2)
                 checkel = common.wait(type='xpath', el=postIcon)
                 if checkel:
                     screenshot("PostLink")
                 else:
-                    deepblu.log('Please check the screen shoot')
+                    log('Please check the screen shoot')
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
 
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Post Link] end")
+        log(e, 'w')
+    log("[Post Link] end")
 
 
 def post_photo():
-    deepblu.log("[Post Photo] start")
+    log("[Post Photo] start")
     try:
         postIcon = GlobalString.create_post
         el = common.wait(type='xpath', el=postIcon)
@@ -625,7 +625,7 @@ def post_photo():
             if el2:
                 driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/photo_post_group").click()
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
 
             el3 = common.wait(type="id", el="com.android.packageinstaller:id/permission_allow_button")
             if el3:
@@ -692,23 +692,23 @@ def post_photo():
             if el3:
                 driver.find_element_by_id("android:id/button1").click()
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
             common.sleep(2)
             checkel = common.wait(type='xpath', el=postIcon)
             if checkel:
                 screenshot("PostPhoto")
             else:
-                deepblu.log('Please check the screen shoot')
+                log('Please check the screen shoot')
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
 
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Post Photo] end")
+        log(e, 'w')
+    log("[Post Photo] end")
 
 
 def post_video():
-    deepblu.log("[Post Video] start")
+    log("[Post Video] start")
     try:
         postIcon = GlobalString.create_post
         el = common.wait(type='xpath', el=postIcon)
@@ -720,7 +720,7 @@ def post_video():
             if el2:
                 driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/video_post_group").click()
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
 
             el3 = common.wait(type="id", el="com.android.packageinstaller:id/permission_allow_button")
             if el3:
@@ -743,7 +743,7 @@ def post_video():
                         "FrameLayout[1]/android.widget.GridView[1]/android.widget.FrameLayout[1]/android.widget."
                         "ImageView[1]").click()
                 else:
-                    deepblu.log("Please check the screen shoot")
+                    log("Please check the screen shoot")
                 common.sleep(2)
                 common.back()
             else:
@@ -759,7 +759,7 @@ def post_video():
                         "FrameLayout[1]/android.widget.GridView[1]/android.widget.FrameLayout[1]/android.widget."
                         "ImageView[1]").click()
                 else:
-                    deepblu.log("Please check the screen shoot")
+                    log("Please check the screen shoot")
             common.sleep(5)
             content = ""
             content = "[AutoTest]\n" + common.randomword(10, GlobalString.bio) + "\n" + time.strftime("%Y%m%d%H%M%S")
@@ -773,24 +773,24 @@ def post_video():
             if el3:
                 driver.find_element_by_id("android:id/button1").click()
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
 
             checkel = common.wait(type='xpath', el=postIcon)
             if checkel:
                 screenshot("PostVideo")
             else:
-                deepblu.log('Please check the screen shoot')
+                log('Please check the screen shoot')
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Post Video] end")
+        log(e, 'w')
+    log("[Post Video] end")
 
 
 # sign up with email
 # should be samsung IME
 def signup(username=None, email=None, password=None):
-    deepblu.log("[Sign up] start")
+    log("[Sign up] start")
     try:
         if username == None:
             username = "test" + time.strftime("%m%d%H%M")
@@ -814,20 +814,20 @@ def signup(username=None, email=None, password=None):
             if elcheck:
                 screenshot('SignUp')
             else:
-                deepblu.log('Please check the screen shoot')
+                log('Please check the screen shoot')
 
-            deepblu.log("[Sign up] end")
+            log("[Sign up] end")
             return email
 
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 # verify:code/url
 def verify(verify='code', Useremail=None):
-    deepblu.log("[Verify] start")
+    log("[Verify] start")
     try:
         # if way ==None:
         #     Useremail = signup()
@@ -837,7 +837,7 @@ def verify(verify='code', Useremail=None):
         verifydict = {}
         verifydict = common.getusercode(Useremail)
         if len(verifydict) == 0:
-            deepblu.log("Cannot get verify code.Please check the screen")
+            log("Cannot get verify code.Please check the screen")
         else:
             if verify == "code":
                 code = verifydict["code"]
@@ -860,15 +860,15 @@ def verify(verify='code', Useremail=None):
             screenshot("Veirfy")
         else:
             screenshot("Veirfyfail")
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
 
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Verify] end")
+        log(e, 'w')
+    log("[Verify] end")
 
 
 def signup_skip():
-    deepblu.log("[Sign up and skip] start")
+    log("[Sign up and skip] start")
     try:
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/fragment_signup_verify_skip_text").click()
         common.sleep(2)
@@ -877,37 +877,37 @@ def signup_skip():
         if checkel:
             screenshot("SignUpSkip")
         else:
-            deepblu.log("Please check the screen shoot", "w")
+            log("Please check the screen shoot", "w")
 
-        deepblu.log("[Sign up and skip] end")
+        log("[Sign up and skip] end")
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 def signup_token_expire(Useremail):
-    deepblu.log("[Sign up token expire] start")
+    log("[Sign up token expire] start")
     try:
         # token expired
         token = common.token_expired(Useremail)
         if token:
-            driver.find_element_by_xpath(GlobalString.tab + "[2]").click()
+            driver.find_element_by_xpath(GlobalString.community).click()
             common.sleep(2)
             # check token expired successfully or not(enter to email verify page)
             checkel = common.wait(type='id', el="com.deepblu.android.deepblu.internal:id/activity_toolbar_title")
             if checkel:
                 screenshot("SignUpTokenExpire")
             else:
-                deepblu.log("Please check the screenshot", 'w')
+                log("Please check the screenshot", 'w')
         else:
             screenshot("tokenExpireFailed")
-            deepblu.log("Please check the screenshot.", 'w')
+            log("Please check the screenshot.", 'w')
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Sign up token expire] end")
+        log(e, 'w')
+    log("[Sign up token expire] end")
 
 
 def signup_change_email():
-    deepblu.log("[Sign up change email] start")
+    log("[Sign up change email] start")
     try:
         Useremail = signup()
         common.sleep(2)
@@ -929,16 +929,16 @@ def signup_change_email():
             if success:
                 screenshot("SignUp_changeEmail")
             else:
-                deepblu.log("Please check the screen shoot")
+                log("Please check the screen shoot")
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Sign up change email] end")
+        log(e, 'w')
+    log("[Sign up change email] end")
 
 
 def signup_resend_email():
-    deepblu.log("[Sign up resend email] start")
+    log("[Sign up resend email] start")
     try:
         Useremail = signup()
         # resend
@@ -954,15 +954,15 @@ def signup_resend_email():
             screenshot("SignUp_resendEamil_success")
         else:
             screenshot("SignUpfail")
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
 
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Sign up resend email] end")
+        log(e, 'w')
+    log("[Sign up resend email] end")
 
 
 def signup_with_existed_email():
-    deepblu.log("[Sign up with existed email] start")
+    log("[Sign up with existed email] start")
     try:
         el = common.wait(type="id", el="com.deepblu.android.deepblu.internal:id/buttonSignUpWithEmail")
         if el:
@@ -980,17 +980,17 @@ def signup_with_existed_email():
             if elcheck:
                 screenshot('SignupExistedEmail')
             else:
-                deepblu.log('Please check the screen shoot')
+                log('Please check the screen shoot')
         else:
-            deepblu.log("Please check the screen shoot")
+            log("Please check the screen shoot")
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Sign up with existed email] end")
+        log(e, 'w')
+    log("[Sign up with existed email] end")
 
 
 # 要先verify過才能執行此function
 def edit_profile_after_signup():
-    deepblu.log("[Edit Profile after sign up] start")
+    log("[Edit Profile after sign up] start")
     try:
         common.sleep(2)
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/popup_bottom_btn_right").click()
@@ -999,10 +999,10 @@ def edit_profile_after_signup():
         if checkel:
             screenshot('editProfileAfterSignup')
         else:
-            deepblu.log('Please check the screenshot')
+            log('Please check the screenshot')
     except Exception as e:
-        deepblu.log(e, 'w')
-    deepblu.log("[Edit Profile after sign up] end")
+        log(e, 'w')
+    log("[Edit Profile after sign up] end")
 
 
 def changePhoto(file, photo):
@@ -1019,7 +1019,7 @@ def changePhoto(file, photo):
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/menu_crop").click()
         common.sleep(2)
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 def hashtag():
@@ -1029,4 +1029,4 @@ def hashtag():
         driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/new_hash_tag").send_keys("TestHashTag")
         common.enter()
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')

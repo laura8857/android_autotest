@@ -10,7 +10,7 @@ import os
 from pymongo import *
 from selenium.webdriver.common.by import By
 
-import deepblu_lib as deepblu
+from deepblu_lib import log
 import action
 import time
 import datetime
@@ -102,13 +102,13 @@ def token_expired(email):
                 print(result.text)
                 return True
         else:
-            deepblu.log("The mail " + email + " can't be found.", "w")
+            log("The mail " + email + " can't be found.", "w")
             # print("The mail "+email+" can't be found.")
             return False
 
         client.close()
     except Exception as e:
-        deepblu.log(e)
+        log(e)
         return False
 
 
@@ -144,29 +144,29 @@ def wait(type=None, el=None, time=None):
         return True
     except Exception as e:
         screenshot("Error")
-        deepblu.log("[Error] The element: %s can't be found. %s" % (el, e), 'w')
+        log("[Error] The element: %s can't be found. %s" % (el, e), 'w')
         return False
 
 
 def kill_app():
-    deepblu.log('[kill app] start')
+    log('[kill app] start')
     action.driver.close_app()
     # os.popen("adb shell am force-stop com.deepblu.android.deepblu.internal")
-    deepblu.log('[kill app] end')
+    log('[kill app] end')
 
 
 def open_app():
-    deepblu.log('[open app] start')
+    log('[open app] start')
     os.popen('adb shell am start -n com.deepblu.android.deepblu.internal/'
              'com.deepblu.android.deepblu.screen.loading.LoadingActivity')
-    deepblu.log('[open app] end')
+    log('[open app] end')
 
 
 # clear cache and data
 def clear_app():
-    deepblu.log('[clear app] start')
+    log('[clear app] start')
     os.popen("adb shell pm clear com.deepblu.android.deepblu.internal")
-    deepblu.log('[clear app] end')
+    log('[clear app] end')
 
 
 def browser():
@@ -220,7 +220,7 @@ def swipeup():
         action.driver.swipe(startx, starty, startx, endy, 500)
         # driver.swipe(640,2320,640,400,100)
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 # 14/16滑到12/16  小滑動
@@ -235,7 +235,7 @@ def swipeup2():
         action.driver.swipe(startx, starty, startx, endy, 500)
         # driver.swipe(640,2320,640,400,100)
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
 
 
 def isElementPresent(by):
@@ -245,7 +245,7 @@ def isElementPresent(by):
         return 1
 
     except Exception as e:
-        deepblu.log(e, 'w')
+        log(e, 'w')
         print("failed")
         return 0
 

@@ -5,8 +5,7 @@
 # @Software: PyCharm Community Edition
 
 import os
-import datetime
-import GlobalString
+
 
 directory = '%s/' % os.getcwd()
 
