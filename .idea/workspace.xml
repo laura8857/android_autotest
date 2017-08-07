@@ -2,121 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d62088-e888-44b0-a7b1-c41919cfd29a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/20170715_222655.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/20170715_225615.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/20170715_225903.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222838_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222844_SignUp_resendEmail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222913_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222928_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222929_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222941_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222943_SignUpfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/222955_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223051_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223133_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223148_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223150_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223202_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223215_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223310_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223315_SignUpSkip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/223328_Logout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224142_login.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224240_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224341_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224408_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224423_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224425_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224439_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224537_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224543_SignUpSkip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224616_tokenExpireFailed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224630_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224717_SignupExistedEmail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224814_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224839_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224855_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224856_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/224909_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225006_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225008_Verify_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225013_Veirfy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225759_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225804_SignUpSkip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225837_tokenExpireFailed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170715/225851_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/100835_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/100836_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171040_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171106_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171122_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171124_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171139_Logout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171209_login.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171304_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171307_SignUp_resendEmail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171333_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171348_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171351_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171404_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171406_SignUpfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171420_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171515_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171555_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171610_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171613_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171626_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171639_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171734_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171738_SignUpSkip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171752_Logout.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171822_login.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/171916_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172015_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172040_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172056_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172058_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172113_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172207_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172212_SignUpSkip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172218_SignUpTokenExpire.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172300_SignupExistedEmail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172352_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172417_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172432_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172435_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172448_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172543_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172546_Verify_link.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/172551_Veirfy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173834_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173840_SignUp_resendEmail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173905_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173921_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173924_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173937_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173940_SignUpfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/173952_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174045_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174129_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174144_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174149_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174203_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174218_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174313_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174337_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174352_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174356_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174413_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174506_SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174531_Verify_code.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174546_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174550_Veirfyfail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/174605_Error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/20170724_100721.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/20170724_170953.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidAppTest/20170724/20170724_173745.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Utility/remove_fb_remane_email.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/action.py" afterPath="$PROJECT_DIR$/action.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android_signup.py" afterPath="$PROJECT_DIR$/android_signup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deepblu_tool.py" afterPath="$PROJECT_DIR$/deepblu_tool.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -139,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="323">
+              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding>
                 <element signature="e#135#163#0" expanded="true" />
               </folding>
@@ -154,8 +45,8 @@
       <file leaf-file-name="android_signup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/android_signup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#25#40#0" expanded="true" />
               </folding>
@@ -166,8 +57,8 @@
       <file leaf-file-name="action.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/action.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="1053" column="0" lean-forward="true" selection-start-line="1053" selection-start-column="0" selection-end-line="1053" selection-end-column="0" />
+            <state relative-caret-position="17442">
+              <caret line="1026" column="37" lean-forward="false" selection-start-line="1026" selection-start-column="37" selection-end-line="1026" selection-end-column="37" />
               <folding>
                 <element signature="e#139#167#0" expanded="true" />
               </folding>
@@ -175,21 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="android_login.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/android_login.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="deepblu_tool.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deepblu_tool.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+            <state relative-caret-position="424">
+              <caret line="280" column="23" lean-forward="false" selection-start-line="280" selection-start-column="23" selection-end-line="280" selection-end-column="23" />
               <folding>
                 <element signature="e#25#38#0" expanded="true" />
               </folding>
@@ -207,18 +88,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deepblu_lib.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deepblu_lib.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <element signature="e#142#157#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -230,15 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getuserId</find>
-      <find>sign</find>
-      <find>logout</find>
-      <find>wait</find>
-      <find>appfee</find>
-      <find>com.deepblu.android.deepblu.internal:id/create_post_button</find>
-      <find>post_li</find>
-      <find>randomword</find>
-      <find>SIGN</find>
       <find>swip</find>
       <find>post</find>
       <find>login</find>
@@ -260,6 +120,15 @@
       <find>failed</find>
       <find>1948</find>
       <find>2020</find>
+      <find>screenshot</find>
+      <find>wait</find>
+      <find>swipeup()</find>
+      <find>swipeup2()</find>
+      <find>back</find>
+      <find>back()</find>
+      <find>enter()</find>
+      <find>home()</find>
+      <find>sleep</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -281,15 +150,15 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/android_test.py" />
         <option value="$PROJECT_DIR$/remove_fb_remane_email.py" />
-        <option value="$PROJECT_DIR$/deepblu_tool.py" />
         <option value="$PROJECT_DIR$/deepblu_lib.py" />
         <option value="$PROJECT_DIR$/AndroidAppTest/20170531/20170531_152912.log" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/GlobalString.py" />
-        <option value="$PROJECT_DIR$/action.py" />
         <option value="$PROJECT_DIR$/android_login.py" />
         <option value="$PROJECT_DIR$/AndroidAppTest/20170715/20170715_222655.log" />
+        <option value="$PROJECT_DIR$/action.py" />
+        <option value="$PROJECT_DIR$/deepblu_tool.py" />
         <option value="$PROJECT_DIR$/android_signup.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -706,15 +575,16 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19224556" sideWeight="0.4948605" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26849315" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20117474" sideWeight="0.2092084" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17260274" sideWeight="0.7907916" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14383562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20840065" sideWeight="0.4948605" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03335981" sideWeight="0.5051395" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -723,7 +593,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -782,28 +651,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>758</line>
-          <option name="timeStamp" value="289" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>757</line>
-          <option name="timeStamp" value="290" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>755</line>
-          <option name="timeStamp" value="291" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>756</line>
-          <option name="timeStamp" value="292" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -814,7 +661,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="294" />
+      <option name="time" value="295" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -884,16 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="280" lean-forward="false" selection-start-line="2" selection-start-column="280" selection-end-line="2" selection-end-column="280" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deepblu_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#142#157#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -977,16 +814,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding>
-            <element signature="e#135#163#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170724/172417_Verify_code.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -997,6 +824,37 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170724/172056_Error.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deepblu_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="e#142#157#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utility/remove_fb_remane_email.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/desired_capabilities.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1005,54 +863,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170724/172056_Error.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utility/remove_fb_remane_email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android_signup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#25#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deepblu_tool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/action.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="1053" column="0" lean-forward="true" selection-start-line="1053" selection-start-column="0" selection-end-line="1053" selection-end-column="0" />
+        <state relative-caret-position="17442">
+          <caret line="1026" column="37" lean-forward="false" selection-start-line="1026" selection-start-column="37" selection-end-line="1026" selection-end-column="37" />
           <folding>
             <element signature="e#139#167#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/android_login.py">
+    <entry file="file://$PROJECT_DIR$/deepblu_tool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="424">
+          <caret line="280" column="23" lean-forward="false" selection-start-line="280" selection-start-column="23" selection-end-line="280" selection-end-column="23" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#135#163#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
