@@ -17,7 +17,8 @@ import action
 if __name__ == '__main__':
     try:
         action.driver_init()
-        action.login_skip()
+        action.login()
+        action.post_video()
 
     except Exception as e:
         print(e)

@@ -23,7 +23,7 @@ def get_desired_capabilities(test_type, app_path, os):
             'platformName': 'Android',
             'platformVersion': '6.0',
             'appPackage': 'com.deepblu.android.deepblu.internal',
-            'app': '/Users/huweiting/Desktop/laura/android_appium/app-internal2_2_9_3_170210_173325.apk'
+            'app': directory+'app-internal2_2_9_3_170210_173325.apk'
         }
     else:
         desired_caps = {

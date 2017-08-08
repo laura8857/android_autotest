@@ -48,9 +48,20 @@ def driver_close():
         log(e, 'w')
 
 
+def skip_version_check():
+    log('[skip version check] start')
+    try:
+        if common.wait(type='id', el='android:id/button2', time=5):
+            screenshot('skipVersionCheck')
+            driver.find_element_by_id('android:id/button2').click()
+    except Exception as e:
+        log(e, 'w')
+
+
 def login(email=None, password=None):
     log('[login] start')
     try:
+        skip_version_check()
         if email is None:
             email = desired_capabilities.account()
         if password is None:
@@ -106,8 +117,7 @@ def logout():
         common.sleep(3)
         common.swipeup()
         # logout xpath :note5 12 zenfone 10
-        driver.find_element_by_xpath(GlobalString.list + "[12]").click()
-        # driver.find_element_by_xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[12]").click()
+        driver.find_element_by_xpath(GlobalString.logout).click()
         common.sleep(3)
         el = common.wait(type='id', el="android:id/button1")
         if el:
@@ -135,7 +145,7 @@ def about():
         common.sleep(5)
 
         # about page
-        driver.find_element_by_xpath(GlobalString.list + "[11]").click()
+        driver.find_element_by_xpath(GlobalString.about).click()
         common.sleep(3)
 
         screenshot("About")
@@ -198,7 +208,7 @@ def help():
         driver.find_element_by_xpath(GlobalString.menu).click()
         common.sleep(5)
         # help page
-        driver.find_element_by_xpath(GlobalString.list + "[9]").click()
+        driver.find_element_by_xpath(GlobalString.help).click()
         common.sleep(3)
 
         path = " //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]" \
@@ -208,9 +218,9 @@ def help():
         el = common.wait(type='xpath', el=path)
         if el:
             log("網頁正常出現")
+            screenshot("Help")
         else:
             log("\n 網頁沒有load出來")
-        screenshot("Help")
     except Exception as e:
         log(e, 'w')
 
@@ -227,7 +237,7 @@ def appfeedback():
         driver.find_element_by_xpath(GlobalString.menu).click()
         common.sleep(5)
         # appfeedback page
-        driver.find_element_by_xpath(GlobalString.list + "[10]").click()
+        driver.find_element_by_xpath(GlobalString.app_feedback).click()
         common.sleep(3)
 
         optionel = common.wait(type='id', el="com.deepblu.android.deepblu.internal:id/textViewSpinner")
@@ -268,9 +278,9 @@ def events():
     try:
         # menu page
         driver.find_element_by_xpath(GlobalString.menu).click()
-        common.sleep(5)
+        common.sleep(3)
         # events page
-        driver.find_element_by_xpath(GlobalString.list + "[8]").click()
+        driver.find_element_by_xpath(GlobalString.events).click()
         common.sleep(3)
 
         path = "//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]" \
@@ -280,15 +290,35 @@ def events():
         el = common.wait(type='xpath', el=path)
         if el:
             log("網頁正常出現")
+            screenshot("Events")
         else:
             log("\n 網頁沒有load出來")
-        screenshot("Events")
     except Exception as e:
         log(e, 'w')
     # 返回menu page
     common.back()
     log("[Events] end")
 
+def academy():
+    log('[Academy] start')
+    try:
+        # menu page
+        driver.find_element_by_xpath(GlobalString.menu).click()
+        common.sleep(3)
+        # events page
+        driver.find_element_by_xpath(GlobalString.academy).click()
+        common.sleep(3)
+        # 等待網頁load出來
+        if common.wait(type='xpath',el='//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[2]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]'):
+            log("網頁正常出現")
+            screenshot("academy")
+        else:
+            log("\n 網頁沒有load出來")
+    except Exception as e:
+        log(e, 'w')
+    # 返回menu page
+    common.back()
+    log('[Academy] end')
 
 def userProfile():
     try:
@@ -493,7 +523,7 @@ def editUserProfile():
     log("[Edit User Profile] end")
 
 
-    #將照片換回來
+    # 將照片換回來
     # try:
     #     driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/left_button").click()
     #     common.sleep(3)
@@ -722,6 +752,7 @@ def post_video():
             else:
                 log("Please check the screen shoot")
 
+            # 要求權限
             el3 = common.wait(type="id", el="com.android.packageinstaller:id/permission_allow_button")
             if el3:
                 driver.find_element_by_id("com.android.packageinstaller:id/permission_allow_button").click()
@@ -775,6 +806,14 @@ def post_video():
             else:
                 log("Please check the screen shoot")
 
+            #  upload media
+            if common.wait(type='id',el='android:id/parentPanel'):
+                log('Uploading media')
+                for x in range(2):
+                    common.sleep(1)
+                    if not common.wait(type='id',el='android:id/parentPanel'):
+                        log("Finished.")
+                        break
             checkel = common.wait(type='xpath', el=postIcon)
             if checkel:
                 screenshot("PostVideo")
@@ -792,11 +831,11 @@ def post_video():
 def signup(username=None, email=None, password=None):
     log("[Sign up] start")
     try:
-        if username == None:
+        if username is None:
             username = "test" + time.strftime("%m%d%H%M")
-        if email == None:
+        if email is None:
             email = username + "@deepblu.com"
-        if password == None:
+        if password is None:
             password = 'a12345678'
         el = common.wait(type="id", el="com.deepblu.android.deepblu.internal:id/buttonSignUpWithEmail")
         if el:
@@ -1003,6 +1042,21 @@ def edit_profile_after_signup():
     except Exception as e:
         log(e, 'w')
     log("[Edit Profile after sign up] end")
+
+
+def guest():
+    log('[Guest] start')
+    try:
+        if common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/buttonSkip'):
+            driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/buttonSkip').click()
+        if common.wait(type='xpath', el=GlobalString.community):
+            screenshot('Guest')
+        else:
+            log('Please check screenshot.')
+    except Exception as e:
+        log(e, 'w')
+    log('[Guest] end')
+
 
 
 def changePhoto(file, photo):
