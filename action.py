@@ -299,6 +299,7 @@ def events():
     common.back()
     log("[Events] end")
 
+
 def academy():
     log('[Academy] start')
     try:
@@ -309,7 +310,8 @@ def academy():
         driver.find_element_by_xpath(GlobalString.academy).click()
         common.sleep(3)
         # 等待網頁load出來
-        if common.wait(type='xpath',el='//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[2]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]'):
+        if common.wait(type='xpath',
+                       el='//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.view.ViewGroup[1]/android.widget.FrameLayout[3]/android.widget.FrameLayout[2]/android.webkit.WebView[1]/android.view.View[1]/android.view.View[1]/android.view.View[1]'):
             log("網頁正常出現")
             screenshot("academy")
         else:
@@ -319,6 +321,7 @@ def academy():
     # 返回menu page
     common.back()
     log('[Academy] end')
+
 
 def userProfile():
     try:
@@ -806,12 +809,12 @@ def post_video():
             else:
                 log("Please check the screen shoot")
 
-            #  upload media
-            if common.wait(type='id',el='android:id/parentPanel'):
+            # upload media
+            if common.wait(type='id', el='android:id/parentPanel'):
                 log('Uploading media')
                 for x in range(2):
                     common.sleep(1)
-                    if not common.wait(type='id',el='android:id/parentPanel'):
+                    if not common.wait(type='id', el='android:id/parentPanel'):
                         log("Finished.")
                         break
             checkel = common.wait(type='xpath', el=postIcon)
@@ -1047,9 +1050,11 @@ def edit_profile_after_signup():
 def guest():
     log('[Guest] start')
     try:
+        skip_version_check()
         if common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/buttonSkip'):
             driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/buttonSkip').click()
         if common.wait(type='xpath', el=GlobalString.community):
+            common.sleep(2)
             screenshot('Guest')
         else:
             log('Please check screenshot.')
@@ -1057,6 +1062,61 @@ def guest():
         log(e, 'w')
     log('[Guest] end')
 
+
+# 要先執行guest
+def guest_pass_signup():
+    log('[Guest pass signup] start')
+    try:
+        if common.wait(type='xpath', el=GlobalString.create_post):
+            driver.find_element_by_xpath(GlobalString.create_post).click()
+
+            if common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/buttonNotNow'):
+                driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/buttonNotNow').click()
+
+                if common.wait(type='xpath', el=GlobalString.create_post):
+                    common.sleep(2)
+                    screenshot('guestPassSignup')
+                else:
+                    log('Please check screenshot.')
+    except Exception as e:
+        log(e, 'w')
+    log('[Guest pass signup] end')
+
+
+# not yet
+def forget_password(email):
+    log('[Forget password] start')
+    try:
+        if common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/textLogin'):
+            driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/textLogin").click()
+
+            # enter to login page
+            common.sleep(3)
+            # 縮起鍵盤
+            common.back()
+            if common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/textTerms2'):
+                driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/textTerms2').click()
+                #  resend message
+                if common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/editTextEmail'):
+                    driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/editTextEmail').send_keys(email)
+                    common.sleep(2)
+                    # click ok
+                    driver.find_element_by_id('android:id/button1').click()
+                    if common.wait(type='id', el='android:id/button1'):
+                        btn = driver.find_element_by_id('android:id/button1').text
+                        if btn == 'Confirm':
+                            driver.find_element_by_id('android:id/button1').click()
+                        else:
+                            log('Send resend email failed.')
+                    else:
+                        log('Please see the screenshot.')
+                else:
+                    log('Please see the screenshot.')
+            else:
+                log('Please see the screenshot.')
+    except Exception as e:
+        log(e, 'w')
+    log('[Forget password] end')
 
 
 def changePhoto(file, photo):

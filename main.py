@@ -11,14 +11,16 @@ from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.common.keys import Keys
 from action import *
 import action
+import deepblu_tool as common
 
 
 
 if __name__ == '__main__':
     try:
         action.driver_init()
-        action.login()
-        action.post_video()
+        common.remove_terms_conditions('laura@deepblu.com')
+        action.login('laura@deepblu.com','12345678')
+        action.agree_terms_conditions()
 
     except Exception as e:
         print(e)

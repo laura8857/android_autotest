@@ -6,7 +6,6 @@
 
 import os
 
-
 directory = '%s/' % os.getcwd()
 
 def get_desired_capabilities(test_type, app_path, os):
