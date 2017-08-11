@@ -17,6 +17,7 @@ import GlobalString
 import random
 import deepblu_tool as common
 from deepblu_tool import screenshot
+from appium.webdriver.common.touch_action import TouchAction
 
 
 # desired_caps = desired_capabilities.get_desired_capabilities('appPackage', 'com.deepblu.android.deepblu.internal',
@@ -1144,3 +1145,273 @@ def hashtag():
         common.enter()
     except Exception as e:
         log(e, 'w')
+
+
+# test swip and find element
+def test():
+    log('[Test] start')
+    log('[logout] start')
+
+    try:
+        driver.find_element_by_xpath(GlobalString.menu).click()
+        common.sleep(3)
+        if common.swip_find_el('xpath', GlobalString.logout, 'Log Out'):
+            # logout xpath :note5 12 zenfone 10
+            driver.find_element_by_xpath(GlobalString.logout).click()
+            common.sleep(3)
+            el = common.wait(type='id', el="android:id/button1")
+            if el:
+                driver.find_element_by_id("android:id/button1").click()
+            else:
+                log("Please check the screen shoot")
+            common.sleep(3)
+            # verify successful or not
+            checkel = common.wait(type='id', el='com.deepblu.android.deepblu.internal:id/textLogin')
+            if checkel:
+                screenshot("Logout")
+            else:
+                log('Please check the screenshot')
+        else:
+            log('Cannot find element')
+    except Exception as e:
+        log(e, 'w')
+    log('[logout] end')
+    log('[Test] end')
+
+
+# not yet
+def like():
+    log('[like] start')
+    try:
+        # os.popen("adb shell am start -W -a android.intent.action.VIEW -d 'deepblu://deepblu.link/Discover/Trending'")
+        # common.sleep(3)
+        common.swipeup()
+        user = driver.find_elements_by_id('com.deepblu.android.deepblu.internal:id/account_level')
+        for x in range(len(user)):
+            path = GlobalString.post + '[' + str(
+                x + 1) + ']/android.widget.RelativeLayout[3]/android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout[1]'
+            print(path)
+            if common.wait(type='xpath', el=path):
+                driver.find_element_by_xpath(path).click()
+    except Exception as e:
+        log(e, 'w')
+    log('[like] end')
+
+
+# video id :com.deepblu.android.deepblu.internal:id/post_video_gallery
+# post cotent id :com.deepblu.android.deepblu.internal:id/post_post_type_content_group
+# photo content id :com.deepblu.android.deepblu.internal:id/post_photo_content
+# photo id :com.deepblu.android.deepblu.internal:id/post_photo_gallery
+def scroll_post():
+    log('[scroll post] start')
+    dict = []
+    # os.popen("adb shell am start -W -a android.intent.action.VIEW -d 'deepblu://deepblu.link/Discover/Following'")
+    common.sleep(2)
+    # user = driver.find_elements_by_id('com.deepblu.android.deepblu.internal:id/post_post_type_author')
+    # post_count = len(user)
+    # print(post_count)
+    # # print(user)
+    # for x in range(post_count - 1):
+    #     print(x)
+    #     usr = user[x].find_element_by_id('com.deepblu.android.deepblu.internal:id/user_name_text').text
+    #     type = user[x].find_element_by_id('com.deepblu.android.deepblu.internal:id/dive_type_text').text
+    #     post_time = user[x].find_element_by_id('com.deepblu.android.deepblu.internal:id/text_area_1').text
+    #     print(usr, type, post_time)
+    #
+    #     dict.append({
+    #         'user': usr,
+    #         'post_type': type,
+    #         'time': post_time
+    #     })
+    # print(dict)
+
+    # dive log headr: com.deepblu.android.deepblu.internal:id/header
+    # dive log user info:com.deepblu.android.deepblu.internal:id/user_info_text_group
+    #  post user info :com.deepblu.android.deepblu.internal:id/user_info_text_group
+    # dive log username:com.deepblu.android.deepblu.internal:id/user_name_text
+    # dvee log dive type :com.deepblu.android.deepblu.internal:id/dive_type_text
+    # dive log post time:com.deepblu.android.deepblu.internal:id/text_area_1
+    while len(dict) < 8:
+        common.sleep(4)
+        user2 = driver.find_elements_by_id('com.deepblu.android.deepblu.internal:id/user_info_text_group')
+        post_count2 = len(user2)
+        print('total:' + str(post_count2))
+
+        for y in range(post_count2):
+            print(y)
+            try:
+                usr = user2[y].find_element_by_id('com.deepblu.android.deepblu.internal:id/user_name_text').text
+                post_type = user2[y].find_element_by_id('com.deepblu.android.deepblu.internal:id/dive_type_text').text
+                post_time = user2[y].find_element_by_id('com.deepblu.android.deepblu.internal:id/text_area_1').text
+
+                print(usr, post_type, post_time)
+
+                if len(dict) == 0:
+                    dict.append({
+                        'user': usr,
+                        'post_type': post_type,
+                        'time': post_time
+                    })
+                else:
+                    duplicate = False
+                    for item in dict:
+                        if usr == item['user']:
+                            if post_type == item['post_type']:
+                                if post_time == item['time']:
+                                    duplicate = True
+                                    break
+                    print(duplicate)
+                    if not duplicate:
+                        dict.append({
+                            'user': usr,
+                            'post_type': post_type,
+                            'time': post_time
+                        })
+            except Exception as e:
+                log(e)
+        print(len(dict), dict)
+        common.swipeup2()
+        common.sleep(2)
+
+    log('[scroll post] end')
+
+
+# video content-desc: 20170810163139272 from Deepblu on Vimeo
+# photo content id:com.deepblu.android.deepblu.internal:id/post_photo_content
+# status content id: com.deepblu.android.deepblu.internal:id/post_status_content
+# video content id:com.deepblu.android.deepblu.internal:id/post_video_content
+# link content id :com.deepblu.android.deepblu.internal:id/post_url_content
+# dive log content id:com.deepblu.android.deepblu.internal:id/dive_note_text
+
+# hash_tag id  也不一樣欸 =口=
+# status hashtag id :com.deepblu.android.deepblu.internal:id/post_status_tags
+# phtot hashtag id :com.deepblu.android.deepblu.internal:id/post_photo_tags
+# url og title id :com.deepblu.android.deepblu.internal:id/open_graph_title
+# url og derscription:com.deepblu.android.deepblu.internal:id/open_graph_description
+# article title id :com.deepblu.android.deepblu.internal:id/post_article_title
+# article content id :com.deepblu.android.deepblu.internal:id/post_article_short_content
+
+def scroll_live():
+    log('[scroll live] start')
+    dict = {}
+    dict = common.live_feed()
+
+    duplicate = False
+
+    # while not duplicate
+    userInfo = driver.find_elements_by_id('com.deepblu.android.deepblu.internal:id/user_info_text_group')
+    post_count = len(userInfo)
+    print('total:' + str(post_count))
+
+    for x in range(post_count):
+        try:
+            usr = userInfo[x].find_element_by_id('com.deepblu.android.deepblu.internal:id/user_name_text').text
+            post_type = userInfo[x].find_element_by_id(
+                'com.deepblu.android.deepblu.internal:id/dive_type_text').text.lower()
+            # post_time = userInfo[x].find_element_by_id(
+            #     'com.deepblu.android.deepblu.internal:id/text_area_1').text
+
+            print(usr, post_type)
+
+            if usr == dict[0]['user']:
+                if post_type == dict[0]['postType']:
+                    if dict[0]['postType'] == 'Scuba':
+                        if common.swip_find_el('id', 'com.deepblu.android.deepblu.internal:id/time_text_value'):
+                            divetime = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                 'time_text_value').text
+                            divetime = divetime[:divetime.find('m')]
+
+                            max_depth = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                  'depth_text_value').text
+                            max_depth = max_depth[:max_depth.find('m')]
+                            print(divetime, max_depth)
+                            if int(divetime) == dict[0]['duration'] / 60:
+                                # 單位 m
+                                if float(max_depth) == dict[0]['maxDepth']:
+                                    duplicate = True
+                                break
+                        else:
+                            log('找不到duration,太神奇了', 'w')
+                    elif dict[0]['postType'] == 'freedive log':
+                        if common.swip_find_el('id', 'com.deepblu.android.deepblu.internal:id/time_text_value'):
+                            divetime = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                 'time_text_value').text
+                            divetime = divetime[:divetime.find('s')]
+                            print(divetime)
+                            if int(divetime) == dict[0]['duration']:
+                                duplicate = True
+                                break
+                        else:
+                            log('找不到duration,太神奇了', 'w')
+                    elif dict[0]['postType'] == 'photo':
+                        if common.swip_find_el('id', 'com.deepblu.android.deepblu.internal:id/post_photo_content'):
+                            content = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                'post_photo_content').text
+                        else:
+                            content = ''
+                        # if common.swip_find_el('id', 'com.deepblu.android.deepblu.internal:id/post_photo_tags', time=5):
+                        #     tag = driver.find_element_by_id(
+                        #         'com.deepblu.android.deepblu.internal:id/post_photo_tags').text
+                        if content == dict[0]['content']:
+                            duplicate = True
+                            break
+                    elif dict[0]['postType'] == 'video':
+                        if common.swip_find_el('id', 'com.deepblu.android.deepblu.internal:id/post_video_content'):
+                            content = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                'post_video_content').text
+                        else:
+                            content = ''
+
+                        if content == dict[0]['content']:
+                            duplicate = True
+                            break
+                    elif dict[0]['postType'] == 'url':
+                        if common.swip_find_el('id', 'com.deepblu.android.deepblu.internal:id/open_graph_title'):
+                            og_title = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                 'open_graph_title').text
+                            common.swipeup2()
+                            # check if og_description exist or not
+                            if common.wait('id', 'com.deepblu.android.deepblu.internal:id/open_graph_description'):
+                                og_desc = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                    'open_graph_description').text
+                            if common.wait('id', 'com.deepblu.android.deepblu.internal:id/post_url_content'):
+                                content = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                    'post_url_content').text
+                            else:
+                                content = ''
+                            if og_title == dict[0]['og_title']:
+                                if og_desc == dict[0]['og_desc']:
+                                    if content == dict[0]['content']:
+                                        duplicate = True
+                                        break
+                        else:
+                            log('好吧，就是沒有og title', 'w')
+
+                    elif dict[0]['postType'] == 'article':
+                        pass
+
+                    elif dict[0]['postType'] == 'status':
+                        pass
+                    else:
+                        print('nonoo')
+                else:
+                    print('postTypenoooo')
+            else:
+                print('Name noooo')
+            print(duplicate)
+
+        except Exception as e:
+            log(e, 'w')
+
+    if duplicate:
+        screenshot('scroll')
+        print('success')
+    else:
+        log('Cannot find 10th post.Please see log.')
+    log('[scroll live] end')
+
+
+def test():
+    tag = driver.find_element_by_id('com.deepblu.android.deepblu.internal:id/post_status_tags').text
+    tag.strip("#")
+    print(tag)

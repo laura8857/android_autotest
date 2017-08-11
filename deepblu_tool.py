@@ -16,6 +16,7 @@ from deepblu_lib import log
 import action
 import time
 import datetime
+from appium.webdriver.common.touch_action import TouchAction
 
 
 # 隨機字串
@@ -255,26 +256,28 @@ def isElementPresent(by):
 def browser():
     os.popen("adb shell am start -a android.intent.action.VIEW -d 'http://stackoverflow.com/?uid=isme\&debug=true'")
 
+
 # rename the email from AAA@AAA.com to AAAYYYYMMDDHHMMSS@AAA.com
 def rm_email(email):
     now = datetime.now().strftime("%Y%m%d%H%M%S")
     tmp = email.split("@")
-    new_mail = tmp[0]+now+'@'+tmp[1]
+    new_mail = tmp[0] + now + '@' + tmp[1]
 
-    #update to mongodb
+    # update to mongodb
     client = MongoClient("52.197.14.177", 27017)
     client.deepblu.authenticate('deepblu2', 'DGeANYhWyx8prMFgYEj6', mechanism='MONGODB-CR')
     db = client.deepblu
 
-    if db.user.find_one({"email":email}):
+    if db.user.find_one({"email": email}):
         db.user.update_one({"email": email}, {"$set": {"email": new_mail}})
-        if db.user.find_one({"email":email}):
+        if db.user.find_one({"email": email}):
             print("Please check DB, the email can't be changed")
         else:
-            print("The email already modify to "+new_mail)
+            print("The email already modify to " + new_mail)
     else:
-        print("The mail "+email+" can't be found.")
+        print("The mail " + email + " can't be found.")
     client.close()
+
 
 # remove Facebook connection
 def rm_fb(email):
@@ -282,16 +285,17 @@ def rm_fb(email):
     client.deepblu.authenticate('deepblu2', 'DGeANYhWyx8prMFgYEj6', mechanism='MONGODB-CR')
     db = client.deepblu
 
-    if db.socialId.find_one({"email":email}):
-        db.socialId.delete_one({"email":email})
-        if db.socialId.find_one({"email":email}):
+    if db.socialId.find_one({"email": email}):
+        db.socialId.delete_one({"email": email})
+        if db.socialId.find_one({"email": email}):
             print("Please check DB, the fb can't be changed")
         else:
             print("The facebook account is removed.")
     else:
-        print("The facebook account "+email+" can't be found.")
+        print("The facebook account " + email + " can't be found.")
 
-#  remove terms and conditions
+
+# remove terms and conditions
 def remove_terms_conditions(email):
     # connect to mongo
     client = MongoClient("52.197.14.177", 27017)
@@ -309,11 +313,11 @@ def remove_terms_conditions(email):
         print("The mail " + email + " can't be found.")
     client.close()
 
-    #connect mysql db
-    db = pymysql.connect(host='52.197.14.177',user='root',passwd='54353297',db='test',port=3306,charset='utf8')
+    # connect mysql db
+    db = pymysql.connect(host='52.197.14.177', user='root', passwd='54353297', db='test', port=3306, charset='utf8')
     cursor = db.cursor()
 
-    sql = "DELETE FROM deepblu.SignCondition WHERE userId='"+id+"'"
+    sql = "DELETE FROM deepblu.SignCondition WHERE userId='" + id + "'"
 
     try:
         cursor.execute(sql)
@@ -322,3 +326,218 @@ def remove_terms_conditions(email):
     except:
         print('Error')
     db.close()
+
+
+# 滑動找元件  14/16滑到12/16  先往下滑動 找不到 在往上滑動找
+def swip_find_el(type, el, text=None, time=None):
+    try:
+        # 絕對位置 起始點 結束點
+        list = size()
+        startx = list[1] * 0.5
+        starty = list[0] * 0.875
+        endy = list[0] * 0.8125
+        starty1 = list[0] * 0.8125
+        endy1 = list[0] * 0.75
+
+        if type == 'id':
+            type = By.ID
+        elif type == 'class':
+            type = By.CLASS_NAME
+        elif type == 'name':
+            type = By.NAME
+        elif type == 'tag':
+            type = By.TAG_NAME
+        elif type == 'xpath':
+            type = By.XPATH
+        else:
+            type = By.ID
+
+        if time is None:
+            time = 8
+
+        if text is None:
+            # 先找 找不到從下往上滑
+            for x in range(10):
+                if wait(type, el, 3):
+                    return True
+                else:
+                    pass
+                # 為了避開 深度圖，android 在起始點為深度圖時，無法往上滑
+                # 因此有兩個往上滑的起始點
+                action.driver.swipe(startx, starty, startx, endy, 500)
+                sleep(1)
+                action.driver.swipe(startx, starty1, startx, endy1, 500)
+
+            # 同上，不過是從上往下滑
+            for x in range(time):
+                if wait(type, el, 3):
+                    return True
+                else:
+                    pass
+
+                action.driver.swipe(startx, endy1, startx, starty, 500)
+                sleep(1)
+                action.driver.swipe(startx, endy, startx, starty, 500)
+        else:
+            get_text = action.driver.find_element(type, el).text
+            if wait(type, el, 3):
+                if get_text == text:
+                    return True
+            else:
+                pass
+                # 為了避開 深度圖，android 在起始點為深度圖時，無法往上滑
+                # 因此有兩個往上滑的起始點
+            action.driver.swipe(startx, starty, startx, endy, 500)
+            sleep(1)
+            action.driver.swipe(startx, starty1, startx, endy1, 500)
+
+            # 同上，不過是從上往下滑
+        for x in range(10):
+            if wait(type, el, 3):
+                return True
+            else:
+                pass
+
+            action.driver.swipe(startx, endy1, startx, starty, 500)
+            sleep(1)
+            action.driver.swipe(startx, endy, startx, starty, 500)
+    except Exception as e:
+        log(e, 'w')
+        return False
+
+
+def touch_action_move(type1, el1, type2, el2):
+    try:
+        if type1 == 'id':
+            type1 = By.ID
+        elif type1 == 'class':
+            type1 = By.CLASS_NAME
+        elif type1 == 'name':
+            type1 = By.NAME
+        elif type1 == 'tag':
+            type1 = By.TAG_NAME
+        elif type1 == 'xpath':
+            type1 = By.XPATH
+        else:
+            type1 = By.ID
+
+        if type2 == 'id':
+            type2 = By.ID
+        elif type2 == 'class':
+            type2 = By.CLASS_NAME
+        elif type2 == 'name':
+            type2 = By.NAME
+        elif type2 == 'tag':
+            type2 = By.TAG_NAME
+        elif type2 == 'xpath':
+            type2 = By.XPATH
+        else:
+            type2 = By.ID
+
+        el_start = action.driver.find_element(type1, el1)
+        el_end = action.driver.find_element_by_xpath(type2, el2)
+
+        TouchAction(action.driver).press(el_start).move_to(el_end).release().perform()
+    except Exception as e:
+        log(e, 'w')
+
+
+def live_feed(limit=None):
+    try:
+        if limit is None:
+            limit = '10'
+        url = 'http://test.tritondive.co:8000/apis/discover/v0/post/liveFeed?skip=0&limit=' + limit + '&orderCriteria=media'
+        headers = {"Accept-Language": "en"}
+        result = requests.get(url, headers=headers)
+        last_post = []
+        if result.status_code == 200:
+            print(result.json()['result']['posts'])
+            dict = result.json()['result']['posts']
+            # count = len(dict)-1
+            count = 1
+            print(len(dict))
+            print(dict[count]['userName'], dict[count]['postType'], dict[count]['publishTime'])
+            print(dict[0]['userName'], dict[0]['postType'], dict[0]['publishTime'])
+
+            tag = ''
+            if len(dict[0]['tags']) > 0:
+                for x in dict[0]['tags']:
+                    tag = tag + x
+            else:
+                tag = ''
+            print(tag)
+
+            if dict[count]['postType'] != 'divelog':
+                last_post.append({
+                    'user': dict[count]['userName'],
+                    'postType': dict[count]['postType'],
+                    'time': dict[count]['publishTime'],
+                    'content': dict[count]['content'],
+                    'likeCount': dict[count]['likeCount'],
+                    'commentCount': dict[count]['commentCount'],
+                    'shareCount': dict[count]['shareCount'],
+                    'tag': tag,
+                    'og_title': dict[count]['ogTitle'],
+                    'og_desc': dict[count]['ogDescription'],
+                    'title': dict[count]['title']
+                })
+            else:
+                # duration 回傳秒數 要記得轉換 scuba為分鐘 free為秒數
+                if dict[count]['diveLog']['diveType'] == 'Scuba':
+                    dive_type = 'scuba log'
+                else:
+                    dive_type = 'freedive log'
+
+                max = max_depth(dict[count]['diveLog'])
+                last_post.append({
+                    'user': dict[count]['userName'],
+                    'postType': dive_type,
+                    'duration': dict[count]['diveLog']['diveDuration'],
+                    'time': dict[count]['publishTime'],
+                    'content': dict[count]['content'],
+                    'likeCount': dict[count]['likeCount'],
+                    'commentCount': dict[count]['commentCount'],
+                    'shareCount': dict[count]['shareCount'],
+                    'tag': tag,
+                    'maxDepth': max
+
+                })
+
+            print(last_post)
+            return last_post
+        else:
+            print('Error')
+            return {}
+    except Exception as e:
+        log(e, 'w')
+
+def max_depth(dict):
+
+    if ('airPressure' in dict):
+        airPressure = dict['airPressure']
+        # print(airPressure)
+    else:
+        airPressure = 1000
+
+    if ('waterType' in dict):
+        if dict['waterType'] == 1:
+            watertype = 102.5
+        else:
+            watertype = 100
+    else:
+        watertype = 100
+
+    max_depth = (dict['diveMaxDepth'] - airPressure) /float(watertype)
+    max_depth = round(max_depth * 10) / 10
+    print(max_depth)
+
+    return max_depth
+
+
+
+
+
+def test():
+    dict = {}
+    dict = live_feed()
+    print(dict[0]['user'])

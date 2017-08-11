@@ -17,10 +17,10 @@ import deepblu_tool as common
 
 if __name__ == '__main__':
     try:
+        # common.live_feed()
         action.driver_init()
-        common.remove_terms_conditions('laura@deepblu.com')
-        action.login('laura@deepblu.com','12345678')
-        action.agree_terms_conditions()
+        action.login()
+        action.scroll_live()
 
     except Exception as e:
         print(e)
