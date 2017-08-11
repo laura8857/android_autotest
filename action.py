@@ -79,11 +79,15 @@ def login(email=None, password=None):
             common.back()
             common.sleep(3)
             driver.find_element_by_id("com.deepblu.android.deepblu.internal:id/buttonSignUp").click()
+
+            if common.wait(type='xpath',el=GlobalString.create_post):
+                screenshot("login")
+            else:
+                log("Please check the screen shoot")
         else:
             log("Please check the screen shoot")
     except Exception as e:
         log(e, 'w')
-    screenshot("login")
     log('[login] end')
 
 
@@ -1391,6 +1395,14 @@ def scroll_live():
                         pass
 
                     elif dict[0]['postType'] == 'status':
+                        content_total = driver.find_elements_by_id('com.deepblu.android.deepblu.internal:id/'
+                                                                   'post_status_content')
+                        for n in range(len(content_total)):
+                            content = content_total[n].text
+
+                            if content == dict[0]['content']:
+                                duplicate = True
+                                break
                         pass
                     else:
                         print('nonoo')
@@ -1399,6 +1411,9 @@ def scroll_live():
             else:
                 print('Name noooo')
             print(duplicate)
+
+            if duplicate:
+                break
 
         except Exception as e:
             log(e, 'w')

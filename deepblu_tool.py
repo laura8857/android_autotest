@@ -454,7 +454,7 @@ def live_feed(limit=None):
             print(result.json()['result']['posts'])
             dict = result.json()['result']['posts']
             # count = len(dict)-1
-            count = 1
+            count = 2
             print(len(dict))
             print(dict[count]['userName'], dict[count]['postType'], dict[count]['publishTime'])
             print(dict[0]['userName'], dict[0]['postType'], dict[0]['publishTime'])
@@ -532,9 +532,6 @@ def max_depth(dict):
     print(max_depth)
 
     return max_depth
-
-
-
 
 
 def test():
