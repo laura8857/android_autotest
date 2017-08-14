@@ -21,6 +21,6 @@ if __name__ == '__main__':
         action.driver_init()
         action.login()
         action.scroll_live()
-
+        # action.test()
     except Exception as e:
         print(e)

@@ -226,14 +226,14 @@ def swipeup():
         log(e, 'w')
 
 
-# 14/16滑到12/16  小滑動
+# 14/16滑到11/16  小滑動
 def swipeup2():
     try:
         # 絕對位置 起始點 結束點
         list = size()
         startx = list[1] * 0.2
         starty = list[0] * 0.875
-        endy = list[0] * 0.75
+        endy = list[0] * 0.6875
         # print("x1:" + str(startx) + " y1:" + str(starty) + " x2:" + str(startx) + " y2:" + str(endy))
         action.driver.swipe(startx, starty, startx, endy, 500)
         # driver.swipe(640,2320,640,400,100)
@@ -328,7 +328,7 @@ def remove_terms_conditions(email):
     db.close()
 
 
-# 滑動找元件  14/16滑到12/16  先往下滑動 找不到 在往上滑動找
+# 滑動找元件  14/16滑到11/16  先往下滑動 找不到 在往上滑動找
 def swip_find_el(type, el, text=None, time=None):
     try:
         # 絕對位置 起始點 結束點
@@ -336,8 +336,8 @@ def swip_find_el(type, el, text=None, time=None):
         startx = list[1] * 0.5
         starty = list[0] * 0.875
         endy = list[0] * 0.8125
-        starty1 = list[0] * 0.8125
-        endy1 = list[0] * 0.75
+        starty1 = list[0] * 0.6875
+        endy1 = list[0] * 0.5625
 
         if type == 'id':
             type = By.ID
@@ -357,13 +357,37 @@ def swip_find_el(type, el, text=None, time=None):
 
         if text is None:
             # 先找 找不到從下往上滑
-            for x in range(10):
+            for x in range(time):
                 if wait(type, el, 3):
                     return True
                 else:
                     pass
                 # 為了避開 深度圖，android 在起始點為深度圖時，無法往上滑
                 # 因此有兩個往上滑的起始點
+                action.driver.swipe(startx, starty, startx, endy, 500)
+                sleep(1)
+                action.driver.swipe(startx, starty1, startx, endy1, 500)
+
+            # # 同上，不過是從上往下滑
+            # for x in range(time):
+            #     if wait(type, el, 3):
+            #         return True
+            #     else:
+            #         pass
+            #
+            #     action.driver.swipe(startx, endy1, startx, starty, 500)
+            #     sleep(1)
+            #     action.driver.swipe(startx, endy, startx, starty, 500)
+        else:
+            get_text = action.driver.find_element(type, el).text
+            for x in range(time):
+                if wait(type, el, 3):
+                    if get_text == text:
+                        return True
+                else:
+                    pass
+                    # 為了避開 深度圖，android 在起始點為深度圖時，無法往上滑
+                    # 因此有兩個往上滑的起始點
                 action.driver.swipe(startx, starty, startx, endy, 500)
                 sleep(1)
                 action.driver.swipe(startx, starty1, startx, endy1, 500)
@@ -378,29 +402,6 @@ def swip_find_el(type, el, text=None, time=None):
                 action.driver.swipe(startx, endy1, startx, starty, 500)
                 sleep(1)
                 action.driver.swipe(startx, endy, startx, starty, 500)
-        else:
-            get_text = action.driver.find_element(type, el).text
-            if wait(type, el, 3):
-                if get_text == text:
-                    return True
-            else:
-                pass
-                # 為了避開 深度圖，android 在起始點為深度圖時，無法往上滑
-                # 因此有兩個往上滑的起始點
-            action.driver.swipe(startx, starty, startx, endy, 500)
-            sleep(1)
-            action.driver.swipe(startx, starty1, startx, endy1, 500)
-
-            # 同上，不過是從上往下滑
-        for x in range(10):
-            if wait(type, el, 3):
-                return True
-            else:
-                pass
-
-            action.driver.swipe(startx, endy1, startx, starty, 500)
-            sleep(1)
-            action.driver.swipe(startx, endy, startx, starty, 500)
     except Exception as e:
         log(e, 'w')
         return False
@@ -454,7 +455,7 @@ def live_feed(limit=None):
             print(result.json()['result']['posts'])
             dict = result.json()['result']['posts']
             # count = len(dict)-1
-            count = 2
+            count = 0
             print(len(dict))
             print(dict[count]['userName'], dict[count]['postType'], dict[count]['publishTime'])
             print(dict[0]['userName'], dict[0]['postType'], dict[0]['publishTime'])

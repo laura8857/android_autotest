@@ -1,9 +1,0 @@
-2017-08-11 16:34:57 I [driver_init] start
-2017-08-11 16:35:11 I [driver_init] end
-2017-08-11 16:35:11 I [login] start
-2017-08-11 16:35:11 I [skip version check] start
-2017-08-11 16:35:18 W [Error] The element: android:id/button2 can't be found. Message: 
-
-2017-08-11 16:35:47 I [login] end
-2017-08-11 16:35:47 I [scroll live] start
-2017-08-11 16:35:51 I [scroll live] end
