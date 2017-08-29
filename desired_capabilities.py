@@ -16,38 +16,31 @@ def get_desired_capabilities(test_type, app_path, os):
     # none5:091609e258940f03
     # zenfone:G3AZCY03J892
 
-    if os == 'android':
-        desired_caps = {
-            'deviceName': '091609e258940f03',
-            'platformName': 'Android',
-            'platformVersion': '6.0',
-            'appPackage': 'com.deepblu.android.deepblu.internal',
-            'app': directory+'app-internal2_2_9_3_170210_173325.apk'
-        }
-    else:
-        desired_caps = {
-            'deviceName': 'iPhone 5s',
-            'platformName': 'iOS',
-            'platformVersion': '9.3',
-        }
+    desired_caps = {
+        'deviceName': '091609e258940f03',
+        'platformName': 'Android',
+        'platformVersion': '6.0',
+        'appPackage': 'com.deepblu.android.deepblu.internal',
+        'app': directory + 'app-internal2_2_9_3_170210_173325.apk'
+    }
 
-        if test_type == 'app':
-            if app_path=='Settings':
-                desired_caps['app'] = app_path
-            else:
-                # Need to install app
-                desired_caps['app'] = directory + app_path
-
-        elif test_type == 'bundleId':
-            # Know bundle id
-            desired_caps['bundleId'] = app_path
-
-        elif test_type == 'browser':
-            # Test browser
-            desired_caps['browserName'] = 'safari'
+    if test_type == 'app':
+        if app_path == 'Settings':
+            desired_caps['app'] = app_path
         else:
-            # Default is using com.deepblu.deepblu
-            desired_caps['bundleId'] = 'com.deepblu.deepblu'
+            # Need to install app
+            desired_caps['app'] = directory + app_path
+
+    elif test_type == 'bundleId':
+        # Know bundle id
+        desired_caps['bundleId'] = app_path
+
+    elif test_type == 'browser':
+        # Test browser
+        desired_caps['browserName'] = 'safari'
+    else:
+        # Default is using com.deepblu.deepblu
+        desired_caps['bundleId'] = 'com.deepblu.deepblu'
 
     return desired_caps
 
