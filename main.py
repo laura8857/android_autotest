@@ -17,7 +17,7 @@ import deepblu_tool as common
 
 if __name__ == '__main__':
     try:
-        # common.live_feed()
+        common.live_feed()
         action.driver_init()
         action.login()
         action.scroll_live()

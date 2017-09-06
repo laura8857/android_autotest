@@ -446,63 +446,66 @@ def touch_action_move(type1, el1, type2, el2):
 def live_feed(limit=None):
     try:
         if limit is None:
-            limit = '10'
-        url = 'http://test.tritondive.co:8000/apis/discover/v0/post/liveFeed?skip=0&limit=' + limit + '&orderCriteria=media'
+            limit = 10
+        url = 'http://test.tritondive.co:8000/apis/discover/v0/post/liveFeed?skip=0&limit=' + str(limit) + '&orderCriteria=media'
         headers = {"Accept-Language": "en"}
         result = requests.get(url, headers=headers)
         last_post = []
         if result.status_code == 200:
             print(result.json()['result']['posts'])
             dict = result.json()['result']['posts']
-            # count = len(dict)-1
-            count = 0
-            print(len(dict))
-            print(dict[count]['userName'], dict[count]['postType'], dict[count]['publishTime'])
-            print(dict[0]['userName'], dict[0]['postType'], dict[0]['publishTime'])
 
-            tag = ''
-            if len(dict[0]['tags']) > 0:
-                for x in dict[0]['tags']:
-                    tag = tag + x
-            else:
+            for count in dict:
+                # count = len(dict)-1
+                # count = 0
+                # print(len(dict))
+                # print(count)
+                # print(count['userName'], count['postType'], count['publishTime'])
+                # print(dict[0]['userName'], dict[0]['postType'], dict[0]['publishTime'])
+
                 tag = ''
-            print(tag)
-
-            if dict[count]['postType'] != 'divelog':
-                last_post.append({
-                    'user': dict[count]['userName'],
-                    'postType': dict[count]['postType'],
-                    'time': dict[count]['publishTime'],
-                    'content': dict[count]['content'],
-                    'likeCount': dict[count]['likeCount'],
-                    'commentCount': dict[count]['commentCount'],
-                    'shareCount': dict[count]['shareCount'],
-                    'tag': tag,
-                    'og_title': dict[count]['ogTitle'],
-                    'og_desc': dict[count]['ogDescription'],
-                    'title': dict[count]['title']
-                })
-            else:
-                # duration 回傳秒數 要記得轉換 scuba為分鐘 free為秒數
-                if dict[count]['diveLog']['diveType'] == 'Scuba':
-                    dive_type = 'scuba log'
+                if len(count['tags']) > 0:
+                    for x in count['tags']:
+                        tag = tag + x
                 else:
-                    dive_type = 'freedive log'
+                    tag = ''
+                # print(tag)
 
-                max = max_depth(dict[count]['diveLog'])
-                last_post.append({
-                    'user': dict[count]['userName'],
-                    'postType': dive_type,
-                    'duration': dict[count]['diveLog']['diveDuration'],
-                    'time': dict[count]['publishTime'],
-                    'content': dict[count]['content'],
-                    'likeCount': dict[count]['likeCount'],
-                    'commentCount': dict[count]['commentCount'],
-                    'shareCount': dict[count]['shareCount'],
-                    'tag': tag,
-                    'maxDepth': max
+                if count['postType'] != 'divelog':
+                    last_post.append({
+                        'user': count['userName'],
+                        'postType': count['postType'],
+                        'time': count['publishTime'],
+                        'content': count['content'],
+                        'likeCount': count['likeCount'],
+                        'commentCount': count['commentCount'],
+                        'shareCount': count['shareCount'],
+                        'tag': tag,
+                        'og_title': count['ogTitle'],
+                        'og_desc': count['ogDescription'],
+                        'title': count['title']
+                    })
+                else:
+                    # duration 回傳秒數 要記得轉換 scuba為分鐘 free為秒數
+                    if count['diveLog']['diveType'] == 'Scuba':
+                        dive_type = 'scuba log'
+                    else:
+                        dive_type = 'freedive log'
 
-                })
+                    max = max_depth(count['diveLog'])
+                    last_post.append({
+                        'user': count['userName'],
+                        'postType': dive_type,
+                        'duration': count['diveLog']['diveDuration'],
+                        'time': count['publishTime'],
+                        'content': count['content'],
+                        'likeCount': count['likeCount'],
+                        'commentCount': count['commentCount'],
+                        'shareCount': count['shareCount'],
+                        'tag': tag,
+                        'maxDepth': max
+
+                    })
 
             print(last_post)
             return last_post

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d62088-e888-44b0-a7b1-c41919cfd29a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/action__.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/picture.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desired_capabilities.py" afterPath="$PROJECT_DIR$/desired_capabilities.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/action.py" afterPath="$PROJECT_DIR$/action.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deepblu_tool.py" afterPath="$PROJECT_DIR$/deepblu_tool.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +20,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/android_appium$Unittests_in_android_login_py.coverage" NAME="Unittests in android_login.py Coverage Results" MODIFIED="1496455646947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/android_appium$Unittests_in_android_signup.coverage" NAME="Unittests in android_signup Coverage Results" MODIFIED="1500889064195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/android_appium$main.coverage" NAME="main Coverage Results" MODIFIED="1502444599583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/android_appium$main.coverage" NAME="main Coverage Results" MODIFIED="1504665606585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/android_appium$test.coverage" NAME="test Coverage Results" MODIFIED="1502157336998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -31,8 +35,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
                 <element signature="e#135#163#0" expanded="true" />
               </folding>
@@ -40,11 +44,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deepblu_lib__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deepblu_lib__.py">
+      <file leaf-file-name="picture.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/picture.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#67#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -65,8 +81,8 @@
       <file leaf-file-name="action.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/action.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="90" column="22" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="90" selection-end-column="22" />
+            <state relative-caret-position="17">
+              <caret line="1310" column="0" lean-forward="false" selection-start-line="1310" selection-start-column="0" selection-end-line="1310" selection-end-column="0" />
               <folding>
                 <element signature="e#139#167#0" expanded="true" />
               </folding>
@@ -74,15 +90,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deepblu_tool.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/deepblu_tool.py">
+      <file leaf-file-name="deepblu_lib.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deepblu_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="500" column="41" lean-forward="false" selection-start-line="500" selection-start-column="41" selection-end-line="500" selection-end-column="41" />
-              <folding>
-                <element signature="e#25#38#0" expanded="true" />
-                <marker date="1502444375000" expanded="true" signature="8922:8981" ph="DELETE FROM " />
-              </folding>
+            <state relative-caret-position="782">
+              <caret line="50" column="41" lean-forward="false" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/desired_capabilities.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="816">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,11 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>swipeup()</find>
-      <find>swipeup2()</find>
-      <find>back</find>
-      <find>back()</find>
-      <find>enter()</find>
       <find>home()</find>
       <find>sleep</find>
       <find>tab</find>
@@ -158,6 +166,11 @@
       <find>content</find>
       <find>max_depth</find>
       <find>swip</find>
+      <find>limit</find>
+      <find>dict[count]</find>
+      <find>duplicate</find>
+      <find>dict[0]</find>
+      <find>test</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,10 +197,12 @@
         <option value="$PROJECT_DIR$/android_signup.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/GlobalString.py" />
+        <option value="$PROJECT_DIR$/desired_capabilities.py" />
+        <option value="$PROJECT_DIR$/picture.py" />
         <option value="$PROJECT_DIR$/deepblu_tool.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/action.py" />
-        <option value="$PROJECT_DIR$/desired_capabilities.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -198,12 +213,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="773" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -217,8 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,6 +259,35 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="android_appium">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="android_appium">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT=".idea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,6 +295,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/huweiting/Desktop/laura/android_appium/android_signup.py" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -638,19 +680,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="1" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18659128" sideWeight="0.4948605" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15508886" sideWeight="0.4948605" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26849315" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20117474" sideWeight="0.2092084" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10273973" sideWeight="0.7907916" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14383562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23150685" sideWeight="0.7907916" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11643836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03335981" sideWeight="0.5051395" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3520548" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03335981" sideWeight="0.5051395" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -716,33 +759,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>1319</line>
-          <option name="timeStamp" value="340" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>1320</line>
-          <option name="timeStamp" value="341" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>1309</line>
-          <option name="timeStamp" value="358" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>1317</line>
-          <option name="timeStamp" value="359" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/action.py</url>
-          <line>1321</line>
-          <option name="timeStamp" value="377" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -758,10 +774,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170508/20170508_095128.log" />
-    <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170508/20170508_101319.log" />
-    <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170508/20170508_101130.log" />
-    <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170519/160849_login.png" />
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170519/160900_Error.png" />
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170519/161011_Error.png" />
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170519/161106_SignUp.png" />
@@ -809,14 +821,6 @@
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170724/172432_Error.png" />
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170724/172056_Error.png" />
     <entry file="file://$PROJECT_DIR$/Utility/remove_fb_remane_email.py" />
-    <entry file="file://$PROJECT_DIR$/deepblu_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="50" column="41" lean-forward="true" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/certification.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -826,28 +830,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screenshot.py" />
     <entry file="file://$PROJECT_DIR$/log.txt" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170808/142639_skipVersionCheck.png" />
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170808/142648_Guest.png" />
     <entry file="file://$PROJECT_DIR$/AndroidAppTest/20170808/111412_Error.png" />
+    <entry file="file://$PROJECT_DIR$/deepblu_lib__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action__.py" />
+    <entry file="file://$PROJECT_DIR$/deepblu_tool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8194">
+          <caret line="498" column="13" lean-forward="false" selection-start-line="498" selection-start-column="13" selection-end-line="498" selection-end-column="13" />
+          <folding>
+            <element signature="e#25#38#0" expanded="true" />
+            <marker date="1504173756000" expanded="true" signature="8922:8981" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deepblu_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="50" column="41" lean-forward="false" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GlobalString.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desired_capabilities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/picture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#67#97#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -861,10 +905,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/yuhsuan.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/action.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="90" column="22" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="90" selection-end-column="22" />
+        <state relative-caret-position="17">
+          <caret line="1310" column="0" lean-forward="false" selection-start-line="1310" selection-start-column="0" selection-end-line="1310" selection-end-column="0" />
           <folding>
             <element signature="e#139#167#0" expanded="true" />
           </folding>
@@ -873,47 +941,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
             <element signature="e#135#163#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deepblu_lib__.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/action__.py" />
-    <entry file="file://$PROJECT_DIR$/android_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/desired_capabilities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deepblu_tool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="500" column="41" lean-forward="false" selection-start-line="500" selection-start-column="41" selection-end-line="500" selection-end-column="41" />
-          <folding>
-            <element signature="e#25#38#0" expanded="true" />
-            <marker date="1502444375000" expanded="true" signature="8922:8981" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
